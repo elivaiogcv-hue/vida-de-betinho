@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vida & Império — Protótipo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <canvas id="city" width="1120" height="720" aria-label="Mapa da cidade"></canvas>
+
+    <aside class="hud">
+      <section class="brand">
+        <small>VIDA &amp; IMPÉRIO</small>
+        <strong id="rank">Sobrevivente</strong>
+      </section>
+
+      <section class="wallet">
+        <span>Saldo</span>
+        <strong><b id="balance">500</b> <i>V$</i></strong>
+      </section>
+
+      <nav class="tabs" aria-label="Aplicações">
+        <button class="tab active" data-panel="market">Mercado</button>
+        <button class="tab" data-panel="business">Negócios</button>
+        <button class="tab" data-panel="property">Imóveis</button>
+      </nav>
+
+      <section id="market" class="panel active">
+        <h2>Marketplace</h2>
+        <div id="market-list" class="list"></div>
+      </section>
+
+      <section id="business" class="panel">
+        <h2>Empresas</h2>
+        <div id="business-list" class="list"></div>
+        <button id="open-business" class="primary">Abrir loja — 1 000 V$</button>
+      </section>
+
+      <section id="property" class="panel">
+        <h2>Mercado imobiliário</h2>
+        <div id="property-list" class="list"></div>
+      </section>
+
+      <section class="inventory">
+        <span>Inventário</span>
+        <div id="inventory"></div>
+      </section>
+    </aside>
+
+    <div class="controls">WASD / ← ↑ ↓ → mover · E interagir · M mercado</div>
+    <div id="toast" role="status"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
